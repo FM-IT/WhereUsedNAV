@@ -42,5 +42,16 @@ namespace WhereUsedNAV
             public int startline;
             public int endLine;
         }
+        public void createRootNodesArr(TreeNode[] RootNode, ref NavObjectStruct myData)
+        {
+            foreach(ObjTypes MyObjType in Enum.GetValues(typeof(ObjTypes)))
+            {
+                addDataToStruct(ref myData, MyObjType.ToString(), 0, "", "", 0, 0);
+                createNewNode(ref RootNode[(int)MyObjType], MyObjType.ToString(), myData);
+            }
+
+            //ParentNode.Nodes.Add(ChildNode);
+            //return (true);
+        }
     }
 }

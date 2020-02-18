@@ -6,10 +6,30 @@ using System.Threading.Tasks;
 
 namespace WhereUsedNAV
 {
+    enum ObjTypes
+    {
+        TableData,
+        Table,
+        Form,
+        Report,
+        Dataport,
+        Codeunit,
+        XMLport,
+        MenuSuite,
+        Page,
+        Query,
+        System,
+        FieldNumber,
+        Type12,
+        Type13,
+        PageExtension,
+        TableExtension
+    }
     class StructFunctions
     {
         public struct objectTypesStruct
         {
+            ObjTypes MyObjType;
             public string tableName
             {
                 get
@@ -39,76 +59,13 @@ namespace WhereUsedNAV
             {
                 get
                 {
-                    switch (Type)
-                    {
-                        case 0: return "TableData";
-                        case 1: return "Table";
-                        case 2: return "Form";
-                        case 3: return "Report";
-                        case 4: return "Dataport";
-                        case 5: return "Codeunit";
-                        case 6: return "XMLport";
-                        case 7: return "MenuSuite";
-                        case 8: return "Page";
-                        case 99: return "N/A";
-                    }
-                    return "N/A";
+                    Enum.TryParse<ObjTypes>(Type.ToString(), out MyObjType);
+                    return MyObjType.ToString();
                 }
                 set
                 {
-                    switch (value)
-                    {
-                        case "TableData":
-                            {
-                                Type = 0;
-                                break;
-                            }
-                        case "Table":
-                            {
-                                Type = 1;
-                                break;
-                            }
-                        case "Form":
-                            {
-                                Type = 2;
-                                break;
-                            }
-                        case "Report":
-                            {
-                                Type = 3;
-                                break;
-                            }
-                        case "Dataport":
-                            {
-                                Type = 4;
-                                break;
-                            }                        
-                        case "Codeunit":
-                            {
-                                Type = 5;
-                                break;
-                            }
-                        case "XMLport":
-                            {
-                                Type = 6;
-                                break;
-                            }
-                        case "MenuSuite":
-                            {
-                                Type = 7;
-                                break;
-                            }
-                        case "Page":
-                            {
-                                Type = 8;
-                                break;
-                            }
-                        default:
-                            {
-                                Type = 99;
-                                break;
-                            }
-                    }
+                    Enum.TryParse<ObjTypes>(value, out MyObjType);
+                    Type = (int)MyObjType;
                 }
             }
             public string TypeAsString_fieldName

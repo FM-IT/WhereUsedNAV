@@ -1,0 +1,9 @@
+D:\VS-C#\WhereUsedNAV\CSharp\bin\Debug\WhereUsedNAV.exe.config
+D:\VS-C#\WhereUsedNAV\CSharp\bin\Debug\WhereUsedNAV.exe
+D:\VS-C#\WhereUsedNAV\CSharp\bin\Debug\WhereUsedNAV.pdb
+D:\VS-C#\WhereUsedNAV\CSharp\obj\Debug\WhereUsedNAV.csprojAssemblyReference.cache
+D:\VS-C#\WhereUsedNAV\CSharp\obj\Debug\WhereUsedNAV.Form1.resources
+D:\VS-C#\WhereUsedNAV\CSharp\obj\Debug\WhereUsedNAV.Properties.Resources.resources
+D:\VS-C#\WhereUsedNAV\CSharp\obj\Debug\WhereUsedNAV.csproj.GenerateResource.cache
+D:\VS-C#\WhereUsedNAV\CSharp\obj\Debug\WhereUsedNAV.exe
+D:\VS-C#\WhereUsedNAV\CSharp\obj\Debug\WhereUsedNAV.pdb
